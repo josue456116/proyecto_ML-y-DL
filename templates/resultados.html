@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados del Análisis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados del Análisis</h1>
+
+        {% if resultados.error %}
+            <div class="error-message">
+                <p>{{ resultados.error }}</p>
+            </div>
+        {% else %}
+            <div class="results-container">
+                <div class="category-result">
+                    <h2>Categoría Detectada</h2>
+                    <p class="category">{{ resultados.categoria|title }}</p>
+                    <p class="confidence">Nivel de confianza: {{ resultados.confianza }}</p>
+                </div>
+
+                <div class="keywords-section">
+                    <h2>Palabras Clave</h2>
+                    <ul class="keywords-list">
+                        {% for palabra in resultados.palabras_clave %}
+                            <li>{{ palabra }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="original-text">
+                    <h2>Texto Analizado</h2>
+                    <p>{{ resultados.texto_original }}</p>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="actions">
+            <a href="{{ url_for('index') }}" class="button">Analizar otro texto</a>
+        </div>
+    </div>
+</body>
+</html>

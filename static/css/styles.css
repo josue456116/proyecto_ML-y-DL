@@ -1,0 +1,475 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f6fa;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2em;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #3498db;
+}
+
+h2 {
+    color: #2980b9;
+    margin-top: 1.5em;
+}
+
+/* Estilos para los formularios */
+form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    border: 1px solid #e9ecef;
+}
+
+input[type="file"], 
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos para input tipo file */
+.file-input-container {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.file-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.file-button:hover {
+    background-color: #2980b9;
+}
+
+.file-name {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.selected-files {
+    margin-top: 1em;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.file-item .remove-file {
+    color: #e74c3c;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+.file-item .remove-file:hover {
+    background-color: #fee;
+}
+
+/* Separador O */
+.divider {
+    text-align: center;
+    margin: 2em 0;
+    position: relative;
+}
+
+.divider p {
+    background: #f5f6fa;
+    padding: 0 10px;
+    color: #7f8c8d;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Resultados de agrupamiento */
+.grupo {
+    background-color: #fff;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.grupo h3 {
+    color: #2980b9;
+    margin-top: 0;
+}
+
+.grupo ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.grupo li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.grupo li:last-child {
+    border-bottom: none;
+}
+
+/* URL inputs */
+#url-inputs div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button[type="button"] {
+    background-color: #e74c3c;
+}
+
+button[type="button"]:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos para la página de resultados */
+.cluster-container {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.cluster-container h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.keywords {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.keywords h3 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.keywords p {
+    color: #2980b9;
+    margin: 0;
+    font-weight: 500;
+}
+
+.documents {
+    margin-top: 15px;
+}
+
+.documents h3 {
+    color: #34495e;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.documents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.documents li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    line-height: 1.4;
+}
+
+.documents li:last-child {
+    border-bottom: none;
+}
+
+.error-message {
+    background: #fee;
+    color: #e74c3c;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 1em;
+    }
+    
+    input[type="file"], 
+    input[type="url"] {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Text input section */
+.text-input-section {
+    margin: 2em 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e4e8;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    resize: vertical;
+    margin-bottom: 1em;
+}
+
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Estilos para los encabezados dentro de los formularios */
+form h2 {
+    color: #34495e;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Botones de acción flotantes */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.floating-button:hover {
+    background-color: #2980b9;
+}
+
+/* Animaciones y efectos de enfoque en los inputs */
+input[type="text"]:focus,
+textarea:focus,
+input[type="url"]:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+input[type="text"],
+textarea,
+input[type="url"] {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilos de tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ecf0f1;
+    text-align: left;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Notificaciones y mensajes emergentes */
+.notification {
+    background-color: #f1f8e9;
+    color: #388e3c;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.notification.error {
+    background-color: #fdecea;
+    color: #d32f2f;
+}
+
+.notification.warning {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+/* Estilos para carga (spinner) */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos para los íconos */
+.icon {
+    font-size: 24px;
+    color: #3498db;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #2980b9;
+}
+
+/* Estilos para pie de página fijo */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Estilos para barra de progreso */
+.progress-bar-container {
+    width: 100%;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 8px;
+    transition: width 0.5s;
+}
